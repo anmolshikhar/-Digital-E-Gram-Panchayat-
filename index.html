@@ -9,40 +9,42 @@
     <meta name="auther" content="Anmol Shikhar">
     <meta name="keys" content="panchayat , government-services , village-help ,Sarkari ">
     <title>Digital-E-Gram-Panchayat</title>
+    <link rel="stylesheet" href="village.css">
 </head>
 
 <body>
     <header>
-        <img src="ashoka isthama 2.png" alt="Jai hind">
-        <h1>Wellcome</h1>
+        <img src="pngegg.png" alt="Jai hind">
         <h2>भारत सरकार</h2>
+        <p>Welcome</p>
         <div id="pages">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <select name="services" id="Ser_op_bar">
-                <option value="" class="services">All Services</option>
-                <option value="" class="services"><a href="">Eduation</a></option>
-                <option value="" class="services"><a href="">Health</a></option>
-                <option value="" class="services"><a href="">Framer</a></option>
-                <option value="" class="services"><a href="">All Govn Schemes</a></option>
-                <option value="" class="services"><a href=""></a></option>
 
+            <select name="services" id="Ser_op_bar" onchange="navigateService(this.value)">
+                <option value="">All Services</option>
+                <option value="education.html">Education</option>
+                <option value="health.html">Health</option>
+                <option value="farmer.html">Farmer</option>
+                <option value="schemes.html">All Government Schemes</option>
             </select>
+
             <a href="contact.html">Contact</a>
-            <select name="L/R" id=" login">
-                <option value="login"><a href="login.html">login</a></option>
-                <option value="register"><a href="registration.html">Register</a></option>
+
+            <select name="L_R" id="loginSelect" onchange="navigateLogin(this.value)">
+                <option value="login.html">Login</option>
+                <option value="register.html">Register</option>
             </select>
         </div>
-
     </header>
     <main>
-        <h1>
-        </h1>
+        <h1> Village development and wellfare department </h1>
         <p>Digital-E-Gram-Panchayat is a web application for managing village panchayat services. This website helps
             the people by making all the services at one place they don't need to go anywhere to know about their
             policies.</p>
-        <h2>Services</h2>
+        <img src="" alt="" id="img1">
+
+        <h2>Government-services</h2>
         <ul>
             <li><a href="education.html">Education</a></li>
             <li><a href="health.html">Health</a></li>

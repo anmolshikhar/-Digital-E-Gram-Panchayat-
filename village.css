@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    background-color: blanchedalmond;
+    height: 20vh;
+}
+
+header img {
+    width: 10vw;
+    height: 15vh;
+    margin: auto;
+
+}
+
+header h2 {
+    font-size: 5vw;
+    margin: auto;
+    position: relative;
+    left: 15vw;
+
+    top: -3vh;
+}
+
+header h2:hover {
+    color: #f00;
+}
+
+header p {
+    position: relative;
+    top: 8vh;
+    right: 13vw;
+    font-size: 300%;
+    margin: auto;
+}
+header p:hover {
+    visibility: hidden;
+    position: relative;
+    color: blue;
+    
+    
+}
+header p:hover::after {
+    visibility: visible;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    content: "स्वागत है";
+}
+
+#loginSelect {
+    border: none;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    padding: 0%;
+    font-size: 100%;
+
+}
+#Ser_op_bar{
+    border: none;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    padding: 0%;
+}
+
+header div {
+
+    position: relative;
+    top: 20vh;
+    padding: auto;
+    font-size: 100%;
+    margin: auto;
+}
+
+main {
+    margin-top: 500px;
+}
