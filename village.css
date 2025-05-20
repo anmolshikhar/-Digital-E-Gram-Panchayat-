@@ -3,14 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Managing the header and its elements */
 header {
     display: flex;
     background-color: blanchedalmond;
-    height: 20vh;
+    height: 25vh;
 }
 
 header img {
+    position: relative;
+    left: -5vw;
     width: 10vw;
     height: 15vh;
     margin: auto;
@@ -21,8 +23,7 @@ header h2 {
     font-size: 5vw;
     margin: auto;
     position: relative;
-    left: 15vw;
-
+    left: 5vw;
     top: -3vh;
 }
 
@@ -33,21 +34,23 @@ header h2:hover {
 header p {
     position: relative;
     top: 8vh;
-    right: 13vw;
+    right: 30vw;
     font-size: 300%;
     margin: auto;
 }
+
 header p:hover {
     visibility: hidden;
     position: relative;
     color: blue;
-    
-    
+
+
 }
+
 header p:hover::after {
     visibility: visible;
     position: absolute;
-    top: 0; 
+    top: 0;
     left: 0;
     content: "स्वागत है";
 }
@@ -67,7 +70,8 @@ header p:hover::after {
     font-size: 100%;
 
 }
-#Ser_op_bar{
+
+#Ser_op_bar {
     border: none;
     outline: none;
     appearance: none;
@@ -77,15 +81,217 @@ header p:hover::after {
     padding: 0%;
 }
 
-header div {
-
-    position: relative;
-    top: 20vh;
-    padding: auto;
-    font-size: 100%;
-    margin: auto;
+/* Container Styles */
+#pages {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #0d6efd;
+    /* Bootstrap Primary Blue */
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
 }
 
+/* Link Styles */
+#pages a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#pages a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Select Dropdown Styles (Both) */
+#pages select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    color: #0d6efd;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='16' height='16' fill='%230d6efd' class='bi bi-caret-down-fill' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.36 4 3.204 4h9.592c.844 0 1.319 1.013.753 1.658l-4.796 5.482a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+}
+
+/* Optional: Fix iOS safari appearance */
+select:focus {
+    outline: none;
+    border-color: #fff;
+}
+/* working on main contant  */
 main {
-    margin-top: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem 0;
+    color: hsl(129, 75%, 44%);
+}
+
+main p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+#imgCont {
+    position: relative;
+    height: 50vh;
+    width: 70%;
+    /* background-color: #f00; */
+    margin: auto;
+    /* animation: imageChanger 10s infinite; */
+}
+/* making slide show  */
+.btn_image {
+    position: relative;
+    height: 4vh;
+    width: 4vh;
+    background-color: transparent ;
+    border: none;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.2;
+    font-size: 200%;
+   
+}
+main #left{
+    position: relative;
+    /* top: 5vh; */
+    bottom: 25vh;
+    left: 34%;
+}
+main #right{
+    position: relative;
+    /* top: 5vh; */
+    bottom: 27vh;
+    right: 34%;
+}
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: imageChanger 30s infinite;
+}
+
+.img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.img:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.img:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.img:nth-child(4) {
+    animation-delay: 15s;
+}
+
+@keyframes imageChanger {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+/* Working on rest items of main  page */
+main h2{
+    font-size: 5rem;
+    margin: 1rem 0;
+    color: hsl(247, 75%, 44%);
+}
+main h2:hover{
+    color: hsl(129, 75%, 44%);
+    
+}
+
+/* All link together  */
+
+#services_links{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+.site_link{
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    transition: background-color 0.3s;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    color: #000;
+    background-color: rgb(202, 241, 228);
+    cursor: pointer;
+}
+/* Disgning the footer and its elements */
+footer {
+    display: flex;
+    background-color: blanchedalmond;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
 }
